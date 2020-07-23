@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		B08E985D24C9F329009176EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08E985C24C9F329009176EC /* AppDelegate.swift */; };
-		B08E985F24C9F329009176EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08E985E24C9F329009176EC /* SceneDelegate.swift */; };
 		B08E986124C9F329009176EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08E986024C9F329009176EC /* ViewController.swift */; };
 		B08E986424C9F329009176EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08E986224C9F329009176EC /* Main.storyboard */; };
 		B08E986624C9F32D009176EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B08E986524C9F32D009176EC /* Assets.xcassets */; };
 		B08E986924C9F32D009176EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08E986724C9F32D009176EC /* LaunchScreen.storyboard */; };
+		B08E987224C9F4F9009176EC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08E987124C9F4F9009176EC /* Constants.swift */; };
+		B08E987424C9F5CA009176EC /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08E987324C9F5CA009176EC /* APIClient.swift */; };
+		B08E987724C9F686009176EC /* SService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08E987624C9F686009176EC /* SService.swift */; };
+		B08E987924C9FCA9009176EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08E987824C9FCA9009176EC /* SceneDelegate.swift */; };
+		B08E987C24C9FF29009176EC /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08E987B24C9FF29009176EC /* UIViewController+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B08E985924C9F329009176EC /* SkrapTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkrapTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08E985C24C9F329009176EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B08E985E24C9F329009176EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B08E986024C9F329009176EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B08E986324C9F329009176EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B08E986524C9F32D009176EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B08E986824C9F32D009176EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B08E986A24C9F32D009176EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B08E987124C9F4F9009176EC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B08E987324C9F5CA009176EC /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		B08E987624C9F686009176EC /* SService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SService.swift; sourceTree = "<group>"; };
+		B08E987824C9FCA9009176EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B08E987B24C9FF29009176EC /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,43 @@
 		B08E985B24C9F329009176EC /* SkrapTest */ = {
 			isa = PBXGroup;
 			children = (
+				B08E987A24C9FF11009176EC /* Extensions */,
+				B08E987024C9F4AF009176EC /* APIClient */,
 				B08E985C24C9F329009176EC /* AppDelegate.swift */,
-				B08E985E24C9F329009176EC /* SceneDelegate.swift */,
 				B08E986024C9F329009176EC /* ViewController.swift */,
 				B08E986224C9F329009176EC /* Main.storyboard */,
 				B08E986524C9F32D009176EC /* Assets.xcassets */,
 				B08E986724C9F32D009176EC /* LaunchScreen.storyboard */,
 				B08E986A24C9F32D009176EC /* Info.plist */,
+				B08E987824C9FCA9009176EC /* SceneDelegate.swift */,
 			);
 			path = SkrapTest;
+			sourceTree = "<group>";
+		};
+		B08E987024C9F4AF009176EC /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				B08E987524C9F661009176EC /* Models */,
+				B08E987124C9F4F9009176EC /* Constants.swift */,
+				B08E987324C9F5CA009176EC /* APIClient.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		B08E987524C9F661009176EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B08E987624C9F686009176EC /* SService.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B08E987A24C9FF11009176EC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B08E987B24C9FF29009176EC /* UIViewController+Alert.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +176,11 @@
 			files = (
 				B08E986124C9F329009176EC /* ViewController.swift in Sources */,
 				B08E985D24C9F329009176EC /* AppDelegate.swift in Sources */,
-				B08E985F24C9F329009176EC /* SceneDelegate.swift in Sources */,
+				B08E987424C9F5CA009176EC /* APIClient.swift in Sources */,
+				B08E987224C9F4F9009176EC /* Constants.swift in Sources */,
+				B08E987724C9F686009176EC /* SService.swift in Sources */,
+				B08E987924C9FCA9009176EC /* SceneDelegate.swift in Sources */,
+				B08E987C24C9FF29009176EC /* UIViewController+Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +256,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -287,6 +327,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CZ3J2246AK;
 				INFOPLIST_FILE = SkrapTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +346,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CZ3J2246AK;
 				INFOPLIST_FILE = SkrapTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
