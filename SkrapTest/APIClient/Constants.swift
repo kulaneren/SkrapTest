@@ -9,8 +9,10 @@
 import Foundation
 
 enum API {
-    static let URLBase = "https://skrapapis.skrap.xyz/newApi/public/scrapapi/"
+    static let URLAPIBase = "https://skrapapis.skrap.xyz/newApi/public/scrapapi/"
     static let URLExtesionGetServices = "getServices"
+    static let URLBaseImage = "https://skrapapis.skrap.xyz/newApi/public"
+
 
 }
 
