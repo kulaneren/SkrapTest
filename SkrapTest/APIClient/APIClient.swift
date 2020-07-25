@@ -22,7 +22,6 @@ class APIClient {
 
     func getServices(withCompletion completion: @escaping ([SService]?, Error?) -> Void) {
         let url = URL(string: API.URLAPIBase + API.URLExtesionGetServices)!
-        dataTask?.cancel()
         dataTask = defaultSession.dataTask(with: url) { data, response, error in
             if let error = error {
                 DispatchQueue.main.async {

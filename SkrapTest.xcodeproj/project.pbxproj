@@ -16,6 +16,9 @@
 		B05B86D724CB9074005B23AE /* SSubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B86D624CB9074005B23AE /* SSubService.swift */; };
 		B05B86DB24CC3C20005B23AE /* RecentAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B86D924CC3C20005B23AE /* RecentAddressTableViewCell.swift */; };
 		B05B86DC24CC3C20005B23AE /* RecentAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B86DA24CC3C20005B23AE /* RecentAddressTableViewCell.xib */; };
+		B05B86E024CC8443005B23AE /* SubServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B86DE24CC8443005B23AE /* SubServiceTableViewCell.swift */; };
+		B05B86E124CC8443005B23AE /* SubServiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B86DF24CC8443005B23AE /* SubServiceTableViewCell.xib */; };
+		B05B86E324CC8A02005B23AE /* Int+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B86E224CC8A02005B23AE /* Int+Currency.swift */; };
 		B08E985D24C9F329009176EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08E985C24C9F329009176EC /* AppDelegate.swift */; };
 		B08E986124C9F329009176EC /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08E986024C9F329009176EC /* ServicesViewController.swift */; };
 		B08E986424C9F329009176EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08E986224C9F329009176EC /* Main.storyboard */; };
@@ -40,6 +43,9 @@
 		B05B86D624CB9074005B23AE /* SSubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSubService.swift; sourceTree = "<group>"; };
 		B05B86D924CC3C20005B23AE /* RecentAddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentAddressTableViewCell.swift; sourceTree = "<group>"; };
 		B05B86DA24CC3C20005B23AE /* RecentAddressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentAddressTableViewCell.xib; sourceTree = "<group>"; };
+		B05B86DE24CC8443005B23AE /* SubServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubServiceTableViewCell.swift; sourceTree = "<group>"; };
+		B05B86DF24CC8443005B23AE /* SubServiceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubServiceTableViewCell.xib; sourceTree = "<group>"; };
+		B05B86E224CC8A02005B23AE /* Int+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Currency.swift"; sourceTree = "<group>"; };
 		B08E985924C9F329009176EC /* SkrapTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkrapTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08E985C24C9F329009176EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B08E986024C9F329009176EC /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
@@ -114,11 +120,21 @@
 		B0221FD824CB377300BBDB5F /* RecentAddressesScreen */ = {
 			isa = PBXGroup;
 			children = (
+				B05B86DD24CC8415005B23AE /* Cells */,
 				B0221FD924CB384500BBDB5F /* RecentAddressesViewController.swift */,
-				B05B86D924CC3C20005B23AE /* RecentAddressTableViewCell.swift */,
-				B05B86DA24CC3C20005B23AE /* RecentAddressTableViewCell.xib */,
 			);
 			path = RecentAddressesScreen;
+			sourceTree = "<group>";
+		};
+		B05B86DD24CC8415005B23AE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B05B86D924CC3C20005B23AE /* RecentAddressTableViewCell.swift */,
+				B05B86DA24CC3C20005B23AE /* RecentAddressTableViewCell.xib */,
+				B05B86DE24CC8443005B23AE /* SubServiceTableViewCell.swift */,
+				B05B86DF24CC8443005B23AE /* SubServiceTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		B08E985024C9F329009176EC = {
@@ -181,6 +197,7 @@
 			children = (
 				B08E987B24C9FF29009176EC /* UIViewController+Alert.swift */,
 				B0221FD324CB203100BBDB5F /* UIImageView+KingFisher.swift */,
+				B05B86E224CC8A02005B23AE /* Int+Currency.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -254,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B05B86E124CC8443005B23AE /* SubServiceTableViewCell.xib in Resources */,
 				B08E986924C9F32D009176EC /* LaunchScreen.storyboard in Resources */,
 				B08E986624C9F32D009176EC /* Assets.xcassets in Resources */,
 				B05B86DC24CC3C20005B23AE /* RecentAddressTableViewCell.xib in Resources */,
@@ -324,6 +342,8 @@
 				B0E65AE724CB6ABE00503D12 /* SAddress.swift in Sources */,
 				B08E987C24C9FF29009176EC /* UIViewController+Alert.swift in Sources */,
 				B05B86D724CB9074005B23AE /* SSubService.swift in Sources */,
+				B05B86E324CC8A02005B23AE /* Int+Currency.swift in Sources */,
+				B05B86E024CC8443005B23AE /* SubServiceTableViewCell.swift in Sources */,
 				B0221FCC24CA265C00BBDB5F /* ServicesCollectionLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
