@@ -12,14 +12,9 @@ class RecentAddressTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lblAddress: UILabel!
     @IBOutlet weak var lblDetail: UILabel!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func update(address: SAddress) {
+        self.lblAddress.text = "\(address.buildingNumber)" + " " + address.buildingName
+        self.lblDetail.text = address.country + " " + address.postTown + " " + address.postcode
     }
 }

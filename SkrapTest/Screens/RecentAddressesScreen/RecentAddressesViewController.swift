@@ -9,13 +9,26 @@
 import UIKit
 
 class RecentAddressesViewController: UIViewController {
+    @IBOutlet weak var viewBackground: UIView!
+    @IBOutlet weak var tableViewAddresses: UITableView!
+    @IBOutlet weak var tableViewSubServices: UITableView!
 
     private var apiClient = APIClient()
-    private var arryAddresses = [SAddress]()
+    private var arrayAddresses = [SAddress]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         getAddresses(withAPIClient: apiClient)
+        viewBackground.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapGestureRecognizerSelector)))
+
+        tableViewAddresses.register(UINib(nibName: "RecentAddressTableViewCell", bundle: nil), forCellReuseIdentifier: "RecentAddressTableViewCellIdentifier")
+        tableViewAddresses.estimatedRowHeight = 85.0
+        tableViewAddresses.rowHeight = UITableView.automaticDimension
+    }
+
+    @objc func tapGestureRecognizerSelector() {
+        viewBackground.isHidden = true
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,9 +46,38 @@ class RecentAddressesViewController: UIViewController {
                 return
             }
             if let addresses = addresses {
-                self.arryAddresses = addresses
-//                self.collectionServices.reloadData()
+                self.arrayAddresses = addresses
+                self.tableViewAddresses.reloadData()
             }
         })
     }
+}
+
+extension RecentAddressesViewController: UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if tableView == tableViewAddresses {
+            return arrayAddresses.count
+        } else {
+            return 0
+        }
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if tableView == tableViewAddresses {
+            let address = arrayAddresses[indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "RecentAddressTableViewCellIdentifier") as! RecentAddressTableViewCell
+            cell.update(address: address)
+            return cell
+        } else {
+            let address = arrayAddresses[indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "RecentAddressTableViewCellIdentifier") as! RecentAddressTableViewCell
+            cell.update(address: address)
+            return cell
+        }
+    }
+}
+
+extension RecentAddressesViewController: UITableViewDelegate {
+
 }
