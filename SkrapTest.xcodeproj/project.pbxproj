@@ -12,7 +12,7 @@
 		B0221FD124CB1E6900BBDB5F /* ServicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0221FCF24CB1E6900BBDB5F /* ServicesCollectionViewCell.swift */; };
 		B0221FD224CB1E6900BBDB5F /* ServicesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0221FD024CB1E6900BBDB5F /* ServicesCollectionViewCell.xib */; };
 		B0221FD424CB203100BBDB5F /* UIImageView+KingFisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0221FD324CB203100BBDB5F /* UIImageView+KingFisher.swift */; };
-		B0221FDA24CB384500BBDB5F /* RecentAddressesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0221FD924CB384500BBDB5F /* RecentAddressesViewController.swift */; };
+		B0221FDA24CB384500BBDB5F /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0221FD924CB384500BBDB5F /* SelectionViewController.swift */; };
 		B05B86D724CB9074005B23AE /* SSubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B86D624CB9074005B23AE /* SSubService.swift */; };
 		B05B86DB24CC3C20005B23AE /* RecentAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B86D924CC3C20005B23AE /* RecentAddressTableViewCell.swift */; };
 		B05B86DC24CC3C20005B23AE /* RecentAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B86DA24CC3C20005B23AE /* RecentAddressTableViewCell.xib */; };
@@ -39,7 +39,7 @@
 		B0221FCF24CB1E6900BBDB5F /* ServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewCell.swift; sourceTree = "<group>"; };
 		B0221FD024CB1E6900BBDB5F /* ServicesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesCollectionViewCell.xib; sourceTree = "<group>"; };
 		B0221FD324CB203100BBDB5F /* UIImageView+KingFisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+KingFisher.swift"; sourceTree = "<group>"; };
-		B0221FD924CB384500BBDB5F /* RecentAddressesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentAddressesViewController.swift; sourceTree = "<group>"; };
+		B0221FD924CB384500BBDB5F /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 		B05B86D624CB9074005B23AE /* SSubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSubService.swift; sourceTree = "<group>"; };
 		B05B86D924CC3C20005B23AE /* RecentAddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentAddressTableViewCell.swift; sourceTree = "<group>"; };
 		B05B86DA24CC3C20005B23AE /* RecentAddressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentAddressTableViewCell.xib; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		B0221FCD24CB1E2200BBDB5F /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				B0221FD824CB377300BBDB5F /* RecentAddressesScreen */,
+				B0221FD824CB377300BBDB5F /* SelectionScreen */,
 				B0221FD524CB2AFD00BBDB5F /* ServicesScreen */,
 			);
 			path = Screens;
@@ -117,13 +117,13 @@
 			path = ServicesScreen;
 			sourceTree = "<group>";
 		};
-		B0221FD824CB377300BBDB5F /* RecentAddressesScreen */ = {
+		B0221FD824CB377300BBDB5F /* SelectionScreen */ = {
 			isa = PBXGroup;
 			children = (
 				B05B86DD24CC8415005B23AE /* Cells */,
-				B0221FD924CB384500BBDB5F /* RecentAddressesViewController.swift */,
+				B0221FD924CB384500BBDB5F /* SelectionViewController.swift */,
 			);
-			path = RecentAddressesScreen;
+			path = SelectionScreen;
 			sourceTree = "<group>";
 		};
 		B05B86DD24CC8415005B23AE /* Cells */ = {
@@ -330,7 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B08E986124C9F329009176EC /* ServicesViewController.swift in Sources */,
-				B0221FDA24CB384500BBDB5F /* RecentAddressesViewController.swift in Sources */,
+				B0221FDA24CB384500BBDB5F /* SelectionViewController.swift in Sources */,
 				B08E985D24C9F329009176EC /* AppDelegate.swift in Sources */,
 				B05B86DB24CC3C20005B23AE /* RecentAddressTableViewCell.swift in Sources */,
 				B08E987424C9F5CA009176EC /* APIClient.swift in Sources */,

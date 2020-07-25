@@ -1,5 +1,5 @@
 //
-//  RecentAddressesViewController.swift
+//  SelectionViewController.swift
 //  SkrapTest
 //
 //  Created by eren kulan on 24/07/2020.
@@ -8,13 +8,18 @@
 
 import UIKit
 
-class RecentAddressesViewController: UIViewController {
+private enum SelectedModeType {
+    case address
+    case subServices
+}
+
+class SelectionViewController: UIViewController {
     @IBOutlet weak var viewBackground: UIView!
-    @IBOutlet weak var tableViewAddresses: UITableView!
-    @IBOutlet weak var tableViewSubServices: UITableView!
-    @IBOutlet weak var addressesContainer: UIView!
-    @IBOutlet weak var subServicesContainer: UIView!
-    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var containerMain: UIView!
+    @IBOutlet weak var containerAddress: UIStackView!
+    @IBOutlet weak var containerSubServices: UIView!
+
     @IBOutlet weak var viewSelection: UIView!
     @IBOutlet weak var imageViewLike: UIImageView!
     private var labelFeatured: UILabel!
@@ -22,6 +27,7 @@ class RecentAddressesViewController: UIViewController {
     private var apiClient = APIClient()
     private var arrayAddresses = [SAddress]()
     private var arraySubServices = [SSubService]()
+    private var selectedMode: SelectedModeType = .address
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,14 +38,11 @@ class RecentAddressesViewController: UIViewController {
 
     func updateView() {
         viewBackground.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapGestureRecognizerSelector)))
-        tableViewAddresses.register(UINib(nibName: "RecentAddressTableViewCell", bundle: nil), forCellReuseIdentifier: "RecentAddressTableViewCellIdentifier")
-        tableViewAddresses.estimatedRowHeight = 85.0
-        tableViewAddresses.rowHeight = UITableView.automaticDimension
-
-        tableViewSubServices.register(UINib(nibName: "SubServiceTableViewCell", bundle: nil), forCellReuseIdentifier: "SubServiceTableViewCellIdentifier")
-        tableViewSubServices.estimatedRowHeight = 85.0
-        tableViewSubServices.rowHeight = UITableView.automaticDimension
-        subServicesContainer.isHidden = true
+        tableView.register(UINib(nibName: "RecentAddressTableViewCell", bundle: nil), forCellReuseIdentifier: "RecentAddressTableViewCellIdentifier")
+        tableView.register(UINib(nibName: "SubServiceTableViewCell", bundle: nil), forCellReuseIdentifier: "SubServiceTableViewCellIdentifier")
+        tableView.estimatedRowHeight = 85.0
+        tableView.rowHeight = UITableView.automaticDimension
+        containerSubServices.isHidden = true
     }
 
     @objc func tapGestureRecognizerSelector() {
@@ -63,7 +66,7 @@ class RecentAddressesViewController: UIViewController {
             }
             if let addresses = addresses {
                 self.arrayAddresses = addresses
-                self.tableViewAddresses.reloadData()
+                self.tableView.reloadData()
             }
         })
     }
@@ -97,7 +100,7 @@ class RecentAddressesViewController: UIViewController {
             address.buildingName + " " +
             address.postTown
 
-        let absoluteOfViewSelection = subServicesContainer.convert(viewSelection.frame, to: view)
+        let absoluteOfViewSelection = containerSubServices.convert(viewSelection.frame, to: view)
         let frame = view.convert(labelFeatured.frame, to: viewSelection)
         UIView.animate(withDuration: 0.5, animations: {
             self.labelFeatured.frame.origin.x = frame.origin.x
@@ -111,10 +114,10 @@ class RecentAddressesViewController: UIViewController {
     }
 }
 
-extension RecentAddressesViewController: UITableViewDataSource {
+extension SelectionViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableView == tableViewAddresses {
+        if selectedMode == .address {
             return arrayAddresses.count
         } else {
             return arraySubServices.count
@@ -122,7 +125,7 @@ extension RecentAddressesViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if tableView == tableViewAddresses {
+        if selectedMode == .address {
             let address = arrayAddresses[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "RecentAddressTableViewCellIdentifier") as! RecentAddressTableViewCell
             cell.update(address: address)
@@ -136,19 +139,21 @@ extension RecentAddressesViewController: UITableViewDataSource {
     }
 }
 
-extension RecentAddressesViewController: UITableViewDelegate {
+extension SelectionViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if tableView == tableViewAddresses {
+        if selectedMode == .address {
             UIView.animate(withDuration: 0.5, animations: {
-                self.subServicesContainer.isHidden = false
-                self.addressesContainer.isHidden = true
+                self.containerSubServices.isHidden = false
+                self.containerAddress.isHidden = true
             })
-            tableViewSubServices.reloadData()
             
             let cell = tableView.cellForRow(at: indexPath) as! RecentAddressTableViewCell
             let rectInSuperview = cell.stackView.convert(cell.lblAddress.frame, to: self.view)
             createAndAnimateLabel(withFrame: rectInSuperview, address: arrayAddresses[indexPath.row])
+
+            selectedMode = .subServices
+            tableView.reloadData()
         }
     }
 }
