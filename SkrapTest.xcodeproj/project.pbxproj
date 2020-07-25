@@ -12,6 +12,10 @@
 		B0221FD124CB1E6900BBDB5F /* ServicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0221FCF24CB1E6900BBDB5F /* ServicesCollectionViewCell.swift */; };
 		B0221FD224CB1E6900BBDB5F /* ServicesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0221FD024CB1E6900BBDB5F /* ServicesCollectionViewCell.xib */; };
 		B0221FD424CB203100BBDB5F /* UIImageView+KingFisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0221FD324CB203100BBDB5F /* UIImageView+KingFisher.swift */; };
+		B0221FDA24CB384500BBDB5F /* RecentAddressesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0221FD924CB384500BBDB5F /* RecentAddressesViewController.swift */; };
+		B05B86D724CB9074005B23AE /* SSubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B86D624CB9074005B23AE /* SSubService.swift */; };
+		B05B86DB24CC3C20005B23AE /* RecentAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B86D924CC3C20005B23AE /* RecentAddressTableViewCell.swift */; };
+		B05B86DC24CC3C20005B23AE /* RecentAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B86DA24CC3C20005B23AE /* RecentAddressTableViewCell.xib */; };
 		B08E985D24C9F329009176EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08E985C24C9F329009176EC /* AppDelegate.swift */; };
 		B08E986124C9F329009176EC /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08E986024C9F329009176EC /* ServicesViewController.swift */; };
 		B08E986424C9F329009176EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08E986224C9F329009176EC /* Main.storyboard */; };
@@ -20,8 +24,9 @@
 		B08E987224C9F4F9009176EC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08E987124C9F4F9009176EC /* Constants.swift */; };
 		B08E987424C9F5CA009176EC /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08E987324C9F5CA009176EC /* APIClient.swift */; };
 		B08E987724C9F686009176EC /* SService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08E987624C9F686009176EC /* SService.swift */; };
-		B08E987924C9FCA9009176EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08E987824C9FCA9009176EC /* SceneDelegate.swift */; };
 		B08E987C24C9FF29009176EC /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08E987B24C9FF29009176EC /* UIViewController+Alert.swift */; };
+		B0E65AE424CB6A8C00503D12 /* GenericJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E65AE324CB6A8C00503D12 /* GenericJSON.swift */; };
+		B0E65AE724CB6ABE00503D12 /* SAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E65AE624CB6ABE00503D12 /* SAddress.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,10 @@
 		B0221FCF24CB1E6900BBDB5F /* ServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewCell.swift; sourceTree = "<group>"; };
 		B0221FD024CB1E6900BBDB5F /* ServicesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesCollectionViewCell.xib; sourceTree = "<group>"; };
 		B0221FD324CB203100BBDB5F /* UIImageView+KingFisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+KingFisher.swift"; sourceTree = "<group>"; };
+		B0221FD924CB384500BBDB5F /* RecentAddressesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentAddressesViewController.swift; sourceTree = "<group>"; };
+		B05B86D624CB9074005B23AE /* SSubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSubService.swift; sourceTree = "<group>"; };
+		B05B86D924CC3C20005B23AE /* RecentAddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentAddressTableViewCell.swift; sourceTree = "<group>"; };
+		B05B86DA24CC3C20005B23AE /* RecentAddressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentAddressTableViewCell.xib; sourceTree = "<group>"; };
 		B08E985924C9F329009176EC /* SkrapTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkrapTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08E985C24C9F329009176EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B08E986024C9F329009176EC /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
@@ -41,8 +50,9 @@
 		B08E987124C9F4F9009176EC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B08E987324C9F5CA009176EC /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		B08E987624C9F686009176EC /* SService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SService.swift; sourceTree = "<group>"; };
-		B08E987824C9FCA9009176EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B08E987B24C9FF29009176EC /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		B0E65AE324CB6A8C00503D12 /* GenericJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericJSON.swift; sourceTree = "<group>"; };
+		B0E65AE624CB6ABE00503D12 /* SAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAddress.swift; sourceTree = "<group>"; };
 		D011051FB3B80B34A8AD9139 /* Pods-SkrapTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkrapTest.debug.xcconfig"; path = "Target Support Files/Pods-SkrapTest/Pods-SkrapTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,7 +87,8 @@
 		B0221FCD24CB1E2200BBDB5F /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				B0221FD524CB2AFD00BBDB5F /* Services */,
+				B0221FD824CB377300BBDB5F /* RecentAddressesScreen */,
+				B0221FD524CB2AFD00BBDB5F /* ServicesScreen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -91,13 +102,23 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		B0221FD524CB2AFD00BBDB5F /* Services */ = {
+		B0221FD524CB2AFD00BBDB5F /* ServicesScreen */ = {
 			isa = PBXGroup;
 			children = (
 				B0221FCE24CB1E3A00BBDB5F /* Cells */,
 				B08E986024C9F329009176EC /* ServicesViewController.swift */,
 			);
-			path = Services;
+			path = ServicesScreen;
+			sourceTree = "<group>";
+		};
+		B0221FD824CB377300BBDB5F /* RecentAddressesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B0221FD924CB384500BBDB5F /* RecentAddressesViewController.swift */,
+				B05B86D924CC3C20005B23AE /* RecentAddressTableViewCell.swift */,
+				B05B86DA24CC3C20005B23AE /* RecentAddressTableViewCell.xib */,
+			);
+			path = RecentAddressesScreen;
 			sourceTree = "<group>";
 		};
 		B08E985024C9F329009176EC = {
@@ -121,16 +142,15 @@
 		B08E985B24C9F329009176EC /* SkrapTest */ = {
 			isa = PBXGroup;
 			children = (
-				B0221FCD24CB1E2200BBDB5F /* Screens */,
-				B0221FCA24CA260500BBDB5F /* Layouts */,
 				B08E987A24C9FF11009176EC /* Extensions */,
+				B0221FCA24CA260500BBDB5F /* Layouts */,
 				B08E987024C9F4AF009176EC /* APIClient */,
+				B0221FCD24CB1E2200BBDB5F /* Screens */,
 				B08E985C24C9F329009176EC /* AppDelegate.swift */,
 				B08E986224C9F329009176EC /* Main.storyboard */,
 				B08E986524C9F32D009176EC /* Assets.xcassets */,
 				B08E986724C9F32D009176EC /* LaunchScreen.storyboard */,
 				B08E986A24C9F32D009176EC /* Info.plist */,
-				B08E987824C9FCA9009176EC /* SceneDelegate.swift */,
 			);
 			path = SkrapTest;
 			sourceTree = "<group>";
@@ -148,7 +168,10 @@
 		B08E987524C9F661009176EC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B0E65AE324CB6A8C00503D12 /* GenericJSON.swift */,
 				B08E987624C9F686009176EC /* SService.swift */,
+				B0E65AE624CB6ABE00503D12 /* SAddress.swift */,
+				B05B86D624CB9074005B23AE /* SSubService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -233,6 +256,7 @@
 			files = (
 				B08E986924C9F32D009176EC /* LaunchScreen.storyboard in Resources */,
 				B08E986624C9F32D009176EC /* Assets.xcassets in Resources */,
+				B05B86DC24CC3C20005B23AE /* RecentAddressTableViewCell.xib in Resources */,
 				B0221FD224CB1E6900BBDB5F /* ServicesCollectionViewCell.xib in Resources */,
 				B08E986424C9F329009176EC /* Main.storyboard in Resources */,
 			);
@@ -288,14 +312,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				B08E986124C9F329009176EC /* ServicesViewController.swift in Sources */,
+				B0221FDA24CB384500BBDB5F /* RecentAddressesViewController.swift in Sources */,
 				B08E985D24C9F329009176EC /* AppDelegate.swift in Sources */,
+				B05B86DB24CC3C20005B23AE /* RecentAddressTableViewCell.swift in Sources */,
 				B08E987424C9F5CA009176EC /* APIClient.swift in Sources */,
 				B08E987224C9F4F9009176EC /* Constants.swift in Sources */,
 				B08E987724C9F686009176EC /* SService.swift in Sources */,
-				B08E987924C9FCA9009176EC /* SceneDelegate.swift in Sources */,
+				B0E65AE424CB6A8C00503D12 /* GenericJSON.swift in Sources */,
 				B0221FD424CB203100BBDB5F /* UIImageView+KingFisher.swift in Sources */,
 				B0221FD124CB1E6900BBDB5F /* ServicesCollectionViewCell.swift in Sources */,
+				B0E65AE724CB6ABE00503D12 /* SAddress.swift in Sources */,
 				B08E987C24C9FF29009176EC /* UIViewController+Alert.swift in Sources */,
+				B05B86D724CB9074005B23AE /* SSubService.swift in Sources */,
 				B0221FCC24CA265C00BBDB5F /* ServicesCollectionLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

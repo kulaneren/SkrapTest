@@ -21,13 +21,27 @@ class ServicesViewController: UIViewController {
         // Do any additional setup after loading the view.
         getServices(withAPIClient: apiClient)
         initCollectionView()
-
+        self.title = "Services"
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        //collectionServices.collectionViewLayout.invalidateLayout()
         collectionServices.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
     }
+
+//override func viewWillLayoutSubviews() {
+//    super.viewWillLayoutSubviews()
+//    collectionServices.collectionViewLayout.invalidateLayout()
+//}
+
+//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+//        super.viewWillTransition(to: size, with: coordinator)
+//            collectionServices.collectionViewLayout.invalidateLayout()
+//          collectionServices.reloadData()
+//    }
+
+
 
     private func initCollectionView() {
         collectionServices.delegate = self
@@ -55,6 +69,9 @@ class ServicesViewController: UIViewController {
 
 extension ServicesViewController: UICollectionViewDelegate {
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showRecentAddresses", sender: self)
+    }
 }
 
 extension ServicesViewController: UICollectionViewDataSource {
@@ -63,16 +80,10 @@ extension ServicesViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
         let service = arryServices[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: serviceCollectionCellIdentifier, for: indexPath) as! ServicesCollectionViewCell
         cell.update(content: service)
 
         return cell
     }
-
-
-
-
 }
-

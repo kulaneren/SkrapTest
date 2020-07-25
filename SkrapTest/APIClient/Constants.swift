@@ -12,8 +12,8 @@ enum API {
     static let URLAPIBase = "https://skrapapis.skrap.xyz/newApi/public/scrapapi/"
     static let URLExtesionGetServices = "getServices"
     static let URLBaseImage = "https://skrapapis.skrap.xyz/newApi/public"
-
-
+    static let URLExtensionGetRecentAddresses = "getRecentAddresses"
+    static let URLExtensionGetSubServices = "getSubServices"
 }
 
 enum Timeout {

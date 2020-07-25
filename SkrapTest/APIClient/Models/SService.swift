@@ -8,12 +8,6 @@
 
 import Foundation
 
-struct GenericJSON: Decodable {
-    var code: Int
-    var description: String
-    var result: [SService]
-}
-
 enum SServiceCodingKeys: String, CodingKey {
     case id = "service_id", name = "service_name", description, imgUrl = "img_url"
 }
@@ -46,9 +40,4 @@ extension SService {
 
         self.init(id: userId, name: name, description: description, imgUrl: imgUrl)
     }
-
 }
-
-
-
-

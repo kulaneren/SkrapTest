@@ -16,12 +16,11 @@ class ServicesCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         self.layer.borderWidth = 1
         self.layer.cornerRadius = 5
-        self.layer.borderColor = UIColor.blue.cgColor
+        self.layer.borderColor = UIColor.systemTeal.cgColor
     }
 
     func update(content service: SService) {
         imgBackground.setServiceImageWithURL(url: service.imgUrl)
         lblTitle.text = service.name
     }
-
 }
