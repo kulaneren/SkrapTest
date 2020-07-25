@@ -55,6 +55,7 @@
             <connections>
                 <outlet property="lblAddress" destination="oy1-Dr-G5I" id="ocO-A0-zRM"/>
                 <outlet property="lblDetail" destination="zoU-Dh-QiG" id="qAl-8Y-DYh"/>
+                <outlet property="stackView" destination="aj4-SU-3Fu" id="ElZ-Vp-6ax"/>
             </connections>
             <point key="canvasLocation" x="178.2608695652174" y="145.98214285714286"/>
         </tableViewCell>

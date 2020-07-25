@@ -12,7 +12,8 @@ class RecentAddressTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lblAddress: UILabel!
     @IBOutlet weak var lblDetail: UILabel!
-
+    @IBOutlet weak var stackView: UIStackView!
+    
     func update(address: SAddress) {
         self.lblAddress.text = "\(address.buildingNumber)" + " " + address.buildingName
         self.lblDetail.text = address.country + " " + address.postTown + " " + address.postcode

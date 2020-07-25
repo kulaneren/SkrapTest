@@ -124,22 +124,13 @@
                                                     <constraint firstAttribute="width" secondItem="qSp-fV-4dB" secondAttribute="height" multiplier="1:1" id="UaX-Af-lfr"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWu-rK-I1G">
-                                                <rect key="frame" x="20" y="15" width="44.5" height="30"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="qSp-fV-4dB" firstAttribute="top" secondItem="jzw-J9-hh3" secondAttribute="top" constant="20" id="Jya-cy-CGX"/>
-                                            <constraint firstItem="CWu-rK-I1G" firstAttribute="leading" secondItem="jzw-J9-hh3" secondAttribute="leading" constant="20" id="MLt-uO-Ocz"/>
                                             <constraint firstAttribute="trailing" secondItem="qSp-fV-4dB" secondAttribute="trailing" constant="20" id="d7m-4S-kfc"/>
                                             <constraint firstAttribute="height" constant="60" id="jSz-zO-vn9"/>
-                                            <constraint firstAttribute="bottom" secondItem="CWu-rK-I1G" secondAttribute="bottom" constant="15" id="jfy-GY-5ua"/>
                                             <constraint firstAttribute="bottom" secondItem="qSp-fV-4dB" secondAttribute="bottom" constant="20" id="twD-5k-R6f"/>
-                                            <constraint firstItem="CWu-rK-I1G" firstAttribute="top" secondItem="jzw-J9-hh3" secondAttribute="top" constant="15" id="uzx-Ai-wun"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xPJ-0Q-JwU">
@@ -174,6 +165,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="VtN-t9-VLq" firstAttribute="leading" secondItem="H5X-eS-kUg" secondAttribute="leading" constant="20" id="6SI-Er-k4n"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VtN-t9-VLq" secondAttribute="trailing" constant="20" symbolic="YES" id="7Co-mz-JXK"/>
                                     <constraint firstAttribute="width" secondItem="H5X-eS-kUg" secondAttribute="height" multiplier="69:89" id="9Zt-NV-PYn"/>
                                     <constraint firstItem="BZF-Bp-Krk" firstAttribute="top" secondItem="wdt-mS-nbv" secondAttribute="bottom" id="IOw-ZM-Iz2"/>
                                     <constraint firstItem="wdt-mS-nbv" firstAttribute="top" secondItem="VtN-t9-VLq" secondAttribute="bottom" constant="10" id="Jxm-XW-JZO"/>
@@ -210,7 +202,7 @@
                     <navigationItem key="navigationItem" id="VtK-eC-jiR"/>
                     <connections>
                         <outlet property="addressesContainer" destination="55x-96-UDG" id="B2U-Kg-G0q"/>
-                        <outlet property="labelSelection" destination="CWu-rK-I1G" id="YYX-ap-xjg"/>
+                        <outlet property="imageViewLike" destination="qSp-fV-4dB" id="Zz1-BI-UVv"/>
                         <outlet property="subServicesContainer" destination="H5X-eS-kUg" id="O1J-3Q-J9J"/>
                         <outlet property="tableViewAddresses" destination="6fW-fS-OEj" id="BkU-9G-XlP"/>
                         <outlet property="tableViewSubServices" destination="BZF-Bp-Krk" id="yui-1G-khL"/>

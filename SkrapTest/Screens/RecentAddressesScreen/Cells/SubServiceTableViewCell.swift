@@ -18,5 +18,4 @@ class SubServiceTableViewCell: UITableViewCell {
         let price = subService.price.addCurrency()
         labelPrice.text = price
     }
-    
 }
