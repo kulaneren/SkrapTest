@@ -19,6 +19,13 @@
 		B05B86E024CC8443005B23AE /* SubServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B86DE24CC8443005B23AE /* SubServiceTableViewCell.swift */; };
 		B05B86E124CC8443005B23AE /* SubServiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B86DF24CC8443005B23AE /* SubServiceTableViewCell.xib */; };
 		B05B86E324CC8A02005B23AE /* Int+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B86E224CC8A02005B23AE /* Int+Currency.swift */; };
+		B05B86F424CCE0AE005B23AE /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B86F324CCE0AE005B23AE /* APIClientTests.swift */; };
+		B05B86F724CCE222005B23AE /* getServices.json in Resources */ = {isa = PBXBuildFile; fileRef = B05B86F624CCE222005B23AE /* getServices.json */; };
+		B05B86F924CCE8AB005B23AE /* getRecentAdresses.json in Resources */ = {isa = PBXBuildFile; fileRef = B05B86F824CCE8AB005B23AE /* getRecentAdresses.json */; };
+		B05B86FB24CCE8F9005B23AE /* getSubServices.json in Resources */ = {isa = PBXBuildFile; fileRef = B05B86FA24CCE8F9005B23AE /* getSubServices.json */; };
+		B05B86FE24CCED50005B23AE /* ServicesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B86FD24CCED50005B23AE /* ServicesViewControllerTests.swift */; };
+		B05B870124CCF193005B23AE /* APIClientFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B870024CCF193005B23AE /* APIClientFake.swift */; };
+		B05B870324CCF946005B23AE /* SelectionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B870224CCF946005B23AE /* SelectionViewControllerTests.swift */; };
 		B08E985D24C9F329009176EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08E985C24C9F329009176EC /* AppDelegate.swift */; };
 		B08E986124C9F329009176EC /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08E986024C9F329009176EC /* ServicesViewController.swift */; };
 		B08E986424C9F329009176EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08E986224C9F329009176EC /* Main.storyboard */; };
@@ -30,11 +37,24 @@
 		B08E987C24C9FF29009176EC /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08E987B24C9FF29009176EC /* UIViewController+Alert.swift */; };
 		B0E65AE424CB6A8C00503D12 /* GenericJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E65AE324CB6A8C00503D12 /* GenericJSON.swift */; };
 		B0E65AE724CB6ABE00503D12 /* SAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E65AE624CB6ABE00503D12 /* SAddress.swift */; };
+		F8F29322CA542C6D18CA0FFB /* Pods_SkrapTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 664B4585FAE1EAFCB01CFF95 /* Pods_SkrapTestTests.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B05B86ED24CCE062005B23AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B08E985124C9F329009176EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B08E985824C9F329009176EC;
+			remoteInfo = SkrapTest;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0C7854DD6683EDB6E1F238DD /* Pods-SkrapTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkrapTestTests.release.xcconfig"; path = "Target Support Files/Pods-SkrapTestTests/Pods-SkrapTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		1D43DB9DF8D821AA7BF4D4B8 /* Pods_SkrapTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkrapTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5746266231C6490FF3F25FDD /* Pods-SkrapTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkrapTest.release.xcconfig"; path = "Target Support Files/Pods-SkrapTest/Pods-SkrapTest.release.xcconfig"; sourceTree = "<group>"; };
+		664B4585FAE1EAFCB01CFF95 /* Pods_SkrapTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkrapTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0221FCB24CA265C00BBDB5F /* ServicesCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionLayout.swift; sourceTree = "<group>"; };
 		B0221FCF24CB1E6900BBDB5F /* ServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewCell.swift; sourceTree = "<group>"; };
 		B0221FD024CB1E6900BBDB5F /* ServicesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -46,6 +66,15 @@
 		B05B86DE24CC8443005B23AE /* SubServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubServiceTableViewCell.swift; sourceTree = "<group>"; };
 		B05B86DF24CC8443005B23AE /* SubServiceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubServiceTableViewCell.xib; sourceTree = "<group>"; };
 		B05B86E224CC8A02005B23AE /* Int+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Currency.swift"; sourceTree = "<group>"; };
+		B05B86E824CCE062005B23AE /* SkrapTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkrapTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B05B86EC24CCE062005B23AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B05B86F324CCE0AE005B23AE /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
+		B05B86F624CCE222005B23AE /* getServices.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getServices.json; sourceTree = "<group>"; };
+		B05B86F824CCE8AB005B23AE /* getRecentAdresses.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getRecentAdresses.json; sourceTree = "<group>"; };
+		B05B86FA24CCE8F9005B23AE /* getSubServices.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getSubServices.json; sourceTree = "<group>"; };
+		B05B86FD24CCED50005B23AE /* ServicesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewControllerTests.swift; sourceTree = "<group>"; };
+		B05B870024CCF193005B23AE /* APIClientFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientFake.swift; sourceTree = "<group>"; };
+		B05B870224CCF946005B23AE /* SelectionViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewControllerTests.swift; sourceTree = "<group>"; };
 		B08E985924C9F329009176EC /* SkrapTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkrapTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08E985C24C9F329009176EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B08E986024C9F329009176EC /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
@@ -60,9 +89,18 @@
 		B0E65AE324CB6A8C00503D12 /* GenericJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericJSON.swift; sourceTree = "<group>"; };
 		B0E65AE624CB6ABE00503D12 /* SAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAddress.swift; sourceTree = "<group>"; };
 		D011051FB3B80B34A8AD9139 /* Pods-SkrapTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkrapTest.debug.xcconfig"; path = "Target Support Files/Pods-SkrapTest/Pods-SkrapTest.debug.xcconfig"; sourceTree = "<group>"; };
+		F30A193985AC0689E78FFA74 /* Pods-SkrapTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkrapTestTests.debug.xcconfig"; path = "Target Support Files/Pods-SkrapTestTests/Pods-SkrapTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B05B86E524CCE062005B23AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8F29322CA542C6D18CA0FFB /* Pods_SkrapTestTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B08E985624C9F329009176EC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				1D43DB9DF8D821AA7BF4D4B8 /* Pods_SkrapTest.framework */,
+				664B4585FAE1EAFCB01CFF95 /* Pods_SkrapTestTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -93,8 +132,8 @@
 		B0221FCD24CB1E2200BBDB5F /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				B0221FD824CB377300BBDB5F /* SelectionScreen */,
 				B0221FD524CB2AFD00BBDB5F /* ServicesScreen */,
+				B0221FD824CB377300BBDB5F /* SelectionScreen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -137,10 +176,58 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		B05B86E924CCE062005B23AE /* SkrapTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				B05B86FF24CCF180005B23AE /* Fake */,
+				B05B86FC24CCED12005B23AE /* Screens */,
+				B05B86F224CCE097005B23AE /* APIClientTests */,
+				B05B86EC24CCE062005B23AE /* Info.plist */,
+			);
+			path = SkrapTestTests;
+			sourceTree = "<group>";
+		};
+		B05B86F224CCE097005B23AE /* APIClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				B05B86F324CCE0AE005B23AE /* APIClientTests.swift */,
+				B05B86F524CCE1BA005B23AE /* Resources */,
+			);
+			path = APIClientTests;
+			sourceTree = "<group>";
+		};
+		B05B86F524CCE1BA005B23AE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B05B86F624CCE222005B23AE /* getServices.json */,
+				B05B86F824CCE8AB005B23AE /* getRecentAdresses.json */,
+				B05B86FA24CCE8F9005B23AE /* getSubServices.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B05B86FC24CCED12005B23AE /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B05B86FD24CCED50005B23AE /* ServicesViewControllerTests.swift */,
+				B05B870224CCF946005B23AE /* SelectionViewControllerTests.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B05B86FF24CCF180005B23AE /* Fake */ = {
+			isa = PBXGroup;
+			children = (
+				B05B870024CCF193005B23AE /* APIClientFake.swift */,
+			);
+			path = Fake;
+			sourceTree = "<group>";
+		};
 		B08E985024C9F329009176EC = {
 			isa = PBXGroup;
 			children = (
 				B08E985B24C9F329009176EC /* SkrapTest */,
+				B05B86E924CCE062005B23AE /* SkrapTestTests */,
 				B08E985A24C9F329009176EC /* Products */,
 				BEE9CD819277313D9864C2E0 /* Pods */,
 				4AD3D5FE48DACCB89A56E396 /* Frameworks */,
@@ -151,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				B08E985924C9F329009176EC /* SkrapTest.app */,
+				B05B86E824CCE062005B23AE /* SkrapTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -207,6 +295,8 @@
 			children = (
 				D011051FB3B80B34A8AD9139 /* Pods-SkrapTest.debug.xcconfig */,
 				5746266231C6490FF3F25FDD /* Pods-SkrapTest.release.xcconfig */,
+				F30A193985AC0689E78FFA74 /* Pods-SkrapTestTests.debug.xcconfig */,
+				0C7854DD6683EDB6E1F238DD /* Pods-SkrapTestTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -214,6 +304,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B05B86E724CCE062005B23AE /* SkrapTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B05B86F124CCE062005B23AE /* Build configuration list for PBXNativeTarget "SkrapTestTests" */;
+			buildPhases = (
+				A4FC5EB040DF1A26031CA9AC /* [CP] Check Pods Manifest.lock */,
+				B05B86E424CCE062005B23AE /* Sources */,
+				B05B86E524CCE062005B23AE /* Frameworks */,
+				B05B86E624CCE062005B23AE /* Resources */,
+				5B3F9FD68CF00F05C90983E2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B05B86EE24CCE062005B23AE /* PBXTargetDependency */,
+			);
+			name = SkrapTestTests;
+			productName = SkrapTestTests;
+			productReference = B05B86E824CCE062005B23AE /* SkrapTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B08E985824C9F329009176EC /* SkrapTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B08E986D24C9F32D009176EC /* Build configuration list for PBXNativeTarget "SkrapTest" */;
@@ -243,6 +353,11 @@
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "eren kulan";
 				TargetAttributes = {
+					B05B86E724CCE062005B23AE = {
+						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
+						TestTargetID = B08E985824C9F329009176EC;
+					};
 					B08E985824C9F329009176EC = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -262,11 +377,22 @@
 			projectRoot = "";
 			targets = (
 				B08E985824C9F329009176EC /* SkrapTest */,
+				B05B86E724CCE062005B23AE /* SkrapTestTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B05B86E624CCE062005B23AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B05B86FB24CCE8F9005B23AE /* getSubServices.json in Resources */,
+				B05B86F724CCE222005B23AE /* getServices.json in Resources */,
+				B05B86F924CCE8AB005B23AE /* getRecentAdresses.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B08E985724C9F329009176EC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -283,6 +409,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5B3F9FD68CF00F05C90983E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SkrapTestTests/Pods-SkrapTestTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SkrapTestTests/Pods-SkrapTestTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SkrapTestTests/Pods-SkrapTestTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9FAC5C56D949DCC57FFD3252 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -298,6 +441,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SkrapTest/Pods-SkrapTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4FC5EB040DF1A26031CA9AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SkrapTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EF034C655F31750D3CFB24A8 /* [CP] Check Pods Manifest.lock */ = {
@@ -325,6 +490,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B05B86E424CCE062005B23AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B05B86FE24CCED50005B23AE /* ServicesViewControllerTests.swift in Sources */,
+				B05B870324CCF946005B23AE /* SelectionViewControllerTests.swift in Sources */,
+				B05B86F424CCE0AE005B23AE /* APIClientTests.swift in Sources */,
+				B05B870124CCF193005B23AE /* APIClientFake.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B08E985524C9F329009176EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -350,6 +526,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B05B86EE24CCE062005B23AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B08E985824C9F329009176EC /* SkrapTest */;
+			targetProxy = B05B86ED24CCE062005B23AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		B08E986224C9F329009176EC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -370,6 +554,53 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B05B86EF24CCE062005B23AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F30A193985AC0689E78FFA74 /* Pods-SkrapTestTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CZ3J2246AK;
+				INFOPLIST_FILE = SkrapTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eren.SkrapTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkrapTest.app/SkrapTest";
+			};
+			name = Debug;
+		};
+		B05B86F024CCE062005B23AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C7854DD6683EDB6E1F238DD /* Pods-SkrapTestTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CZ3J2246AK;
+				INFOPLIST_FILE = SkrapTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eren.SkrapTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkrapTest.app/SkrapTest";
+			};
+			name = Release;
+		};
 		B08E986B24C9F32D009176EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -527,6 +758,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B05B86F124CCE062005B23AE /* Build configuration list for PBXNativeTarget "SkrapTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B05B86EF24CCE062005B23AE /* Debug */,
+				B05B86F024CCE062005B23AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B08E985424C9F329009176EC /* Build configuration list for PBXProject "SkrapTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

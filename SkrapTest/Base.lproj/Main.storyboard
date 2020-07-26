@@ -11,7 +11,7 @@
         <!--Services View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ServicesViewController" customModule="SkrapTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ServicesViewController" storyboardIdentifier="ServicesViewController" id="BYZ-38-t0r" customClass="ServicesViewController" customModule="SkrapTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,18 +22,25 @@
                                 <collectionViewLayout key="collectionViewLayout" id="sM8-tX-jVy" customClass="ServicesCollectionLayout" customModule="SkrapTest" customModuleProvider="target"/>
                                 <cells/>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="RNc-T7-ggU">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <color key="color" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="vEm-pl-Cca" secondAttribute="bottom" id="QkO-0P-z33"/>
+                            <constraint firstItem="RNc-T7-ggU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TbU-to-yT7"/>
                             <constraint firstItem="vEm-pl-Cca" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ajK-Io-ZV0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vEm-pl-Cca" secondAttribute="trailing" constant="20" id="fs8-Ea-0uV"/>
                             <constraint firstItem="vEm-pl-Cca" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="i7G-4b-WJW"/>
+                            <constraint firstItem="RNc-T7-ggU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ruc-1u-zBw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ElJ-Wh-VXP"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="RNc-T7-ggU" id="3H4-kr-zPt"/>
                         <outlet property="collectionServices" destination="vEm-pl-Cca" id="T61-tP-hDH"/>
                         <segue destination="vcf-ew-val" kind="presentation" identifier="showRecentAddresses" animates="NO" modalPresentationStyle="overFullScreen" id="bem-q7-qP5"/>
                     </connections>
@@ -45,7 +52,7 @@
         <!--Selection View Controller-->
         <scene sceneID="u6b-fi-dcK">
             <objects>
-                <viewController storyboardIdentifier="RecentAddressesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vcf-ew-val" customClass="SelectionViewController" customModule="SkrapTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vcf-ew-val" customClass="SelectionViewController" customModule="SkrapTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fau-eY-fKd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,6 +189,10 @@
                                     <constraint firstAttribute="trailing" secondItem="BIv-7z-XZi" secondAttribute="trailing" id="ydP-Nb-SYb"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="OUp-PZ-MxL">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <color key="color" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -191,12 +202,15 @@
                             <constraint firstAttribute="bottom" secondItem="iv9-i6-iy2" secondAttribute="bottom" id="WBL-19-bGI"/>
                             <constraint firstItem="55x-96-UDG" firstAttribute="trailing" secondItem="vqI-zi-ahk" secondAttribute="trailing" id="adS-bb-n0x"/>
                             <constraint firstItem="iv9-i6-iy2" firstAttribute="trailing" secondItem="fau-eY-fKd" secondAttribute="trailing" id="bSR-Lh-AGJ"/>
+                            <constraint firstItem="OUp-PZ-MxL" firstAttribute="centerY" secondItem="fau-eY-fKd" secondAttribute="centerY" id="crG-DK-Lbh"/>
+                            <constraint firstItem="OUp-PZ-MxL" firstAttribute="centerX" secondItem="fau-eY-fKd" secondAttribute="centerX" id="iC8-B3-WgG"/>
                             <constraint firstItem="iv9-i6-iy2" firstAttribute="leading" secondItem="fau-eY-fKd" secondAttribute="leading" id="kIS-zb-uyv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vqI-zi-ahk"/>
                     </view>
                     <navigationItem key="navigationItem" id="VtK-eC-jiR"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="OUp-PZ-MxL" id="CnY-rN-4A3"/>
                         <outlet property="containerAddress" destination="BIv-7z-XZi" id="s8y-5B-6gG"/>
                         <outlet property="containerMain" destination="55x-96-UDG" id="RrO-DE-yPJ"/>
                         <outlet property="containerSubServices" destination="XkT-NR-Cyc" id="cZH-2y-Rei"/>

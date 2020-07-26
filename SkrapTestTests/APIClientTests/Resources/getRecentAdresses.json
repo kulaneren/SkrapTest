@@ -1,0 +1,40 @@
+{
+    "code": 0,
+    "description": "Recent addresses",
+    "result": [
+        {
+            "postcode": "E11 1ER",
+            "post_town": "LONDON",
+            "dependant_locality": null,
+            "double_dependant_locality": null,
+            "thoroughfare": "Hainault Road",
+            "dependant_thoroughfare": null,
+            "building_number": 104,
+            "building_name": "Hillboro Court",
+            "sub_building_name": "Flat 2",
+            "po_box": null,
+            "department_name": null,
+            "organisation_name": null,
+            "udprn": 8007432,
+            "umprn": null,
+            "postcode_type": "S",
+            "su_organisation_indicator": null,
+            "delivery_point_suffix": "1B",
+            "postcode_outward": "E11",
+            "line_1": "Flat 2",
+            "line_2": "Hillboro Court",
+            "premise": "Flat 2, Hillboro Court, 104",
+            "longitude": "-0.000071",
+            "latitude": "51.570712",
+            "eastings": 538700,
+            "northings": 187655,
+            "country": "England",
+            "traditional_county": "Essex",
+            "administrative_county": null,
+            "postal_county": "London",
+            "county": "London",
+            "district": "Waltham Forest",
+            "ward": "Leytonstone"
+        }
+    ]
+}

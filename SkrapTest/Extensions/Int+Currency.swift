@@ -14,6 +14,6 @@ extension Int {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.locale = NSLocale.current
-        return formatter.string(for: 5) ?? ""
+        return formatter.string(for: self) ?? ""
     }
 }

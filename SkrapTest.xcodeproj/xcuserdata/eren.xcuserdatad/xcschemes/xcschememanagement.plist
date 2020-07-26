@@ -7,7 +7,20 @@
 		<key>SkrapTest.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>B05B86E724CCE062005B23AE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B08E985824C9F329009176EC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

@@ -8,26 +8,28 @@
 
 import UIKit
 
-private enum SelectedModeType {
+internal enum SelectedModeType {
     case address
     case subServices
 }
 
 class SelectionViewController: UIViewController {
+
     @IBOutlet weak var viewBackground: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var containerMain: UIView!
     @IBOutlet weak var containerAddress: UIStackView!
     @IBOutlet weak var containerSubServices: UIView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     @IBOutlet weak var viewSelection: UIView!
     @IBOutlet weak var imageViewLike: UIImageView!
-    private var labelFeatured: UILabel!
+    internal var labelFeatured: UILabel!
 
-    private var apiClient = APIClient()
+    internal var apiClient = APIClient()
     private var arrayAddresses = [SAddress]()
     private var arraySubServices = [SSubService]()
-    private var selectedMode: SelectedModeType = .address
+    internal var selectedMode: SelectedModeType = .address
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +38,7 @@ class SelectionViewController: UIViewController {
         updateView()
     }
 
-    func updateView() {
+    internal func updateView() {
         viewBackground.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapGestureRecognizerSelector)))
         tableView.register(UINib(nibName: "RecentAddressTableViewCell", bundle: nil), forCellReuseIdentifier: "RecentAddressTableViewCellIdentifier")
         tableView.register(UINib(nibName: "SubServiceTableViewCell", bundle: nil), forCellReuseIdentifier: "SubServiceTableViewCellIdentifier")
@@ -56,6 +58,7 @@ class SelectionViewController: UIViewController {
     }
 
     internal func getAddresses(withAPIClient apiClient: APIClient) {
+        activityIndicator.startAnimating()
         apiClient.getRecentAdresses(withCompletion: { addresses, error in
             if let error = error as NSError? {
                 let alertAction = UIAlertAction(title: "Ok",
@@ -68,6 +71,7 @@ class SelectionViewController: UIViewController {
                 self.arrayAddresses = addresses
                 self.tableView.reloadData()
             }
+            self.activityIndicator.stopAnimating()
         })
     }
 
@@ -86,7 +90,9 @@ class SelectionViewController: UIViewController {
         })
     }
 
-    internal func createAndAnimateLabel(withFrame frame: CGRect, address: SAddress) {
+    internal func createAndAnimateLabel(withFrame frame: CGRect,
+                                        address: SAddress,
+                                        completion: (() -> Void)? = nil) {
         labelFeatured = UILabel(frame: CGRect(x: frame.origin.x,
                                               y: frame.origin.y,
                                               width: viewSelection.frame.size.width - (viewSelection.frame.size.width - imageViewLike.frame.origin.x) - frame.origin.x,
@@ -110,6 +116,7 @@ class SelectionViewController: UIViewController {
             self.labelFeatured.frame = frame
             self.labelFeatured.removeFromSuperview()
             self.viewSelection.addSubview(self.labelFeatured)
+            completion?()
         })
     }
 }
@@ -150,7 +157,9 @@ extension SelectionViewController: UITableViewDelegate {
             
             let cell = tableView.cellForRow(at: indexPath) as! RecentAddressTableViewCell
             let rectInSuperview = cell.stackView.convert(cell.lblAddress.frame, to: self.view)
-            createAndAnimateLabel(withFrame: rectInSuperview, address: arrayAddresses[indexPath.row])
+            createAndAnimateLabel(withFrame: rectInSuperview,
+                                  address: arrayAddresses[indexPath.row],
+                                  completion: nil)
 
             selectedMode = .subServices
             tableView.reloadData()

@@ -1,0 +1,49 @@
+{
+    "code": 0,
+    "description": "Services found successfuly",
+    "result": [
+        {
+            "service_id": 2,
+            "service_name": "Skip Hire",
+            "description": "<p>Ideal for disposing of large amounts of building, construction and garden waste. Skips come&nbsp;in varied sizes and are measured in yards.</p>",
+            "img_url": "/service_images/skip_hire.png"
+        },
+        {
+            "service_id": 1,
+            "service_name": "Grab Hire",
+            "description": "<p>Ideal for disposing of&nbsp;large amounts of building, construction and garden waste.&nbsp;&nbsp;A&nbsp;grab lorry uses a grab arm and bucket to collect and clear away large quantities of waste from otherwise inaccessible areas</p>",
+            "img_url": "/service_images/grab_hire.png"
+        },
+        {
+            "service_id": 3,
+            "service_name": "Cage Hire",
+            "description": "<p>An alternative removal solution to skip hire, suitable for all types of waste removals and includes a professional and experienced driver who will assist you in loading your waste. Ideal for removal of bulky items or for locations where a skip isn&#39;t practical, such as more congested roads or busy urban areas with parking restrictions.</p>",
+            "img_url": "/service_images/cage_hire.png"
+        },
+        {
+            "service_id": 29,
+            "service_name": "Aggregates",
+            "description": "<p>Aggregates give&nbsp;volume, stability, resistance to wear or erosion, and other desired physical properties to the finished product.</p>",
+            "img_url": "/service_images/aggregate.png"
+        },
+        {
+            "service_id": 80,
+            "service_name": "Concrete",
+            "description": "<p>Ready Mix Concrete is a batch of concrete that is pre-mixed before being delivered to the project site. Tell us the volume required, and we have it delivered to site in a volume metric vehicle.&nbsp;</p>",
+            "img_url": "/service_images/concrete.png"
+        },
+        {
+            "service_id": 43,
+            "service_name": "Portaloo",
+            "description": "<p>We have portaloos available for varied workforce sizes, hired on a weekly basis with an additional haulage charge.</p>",
+            "img_url": "/service_images/portallo.png"
+        },
+        {
+            "service_id": 60,
+            "service_name": "Plant Hire",
+            "description": "<p>Plant hire consists of a varirty of tools, plant and equipment necessary for construction site operations.&nbsp;</p>",
+            "img_url": "/service_images/plant_hire.png"
+        }
+    ]
+}
+

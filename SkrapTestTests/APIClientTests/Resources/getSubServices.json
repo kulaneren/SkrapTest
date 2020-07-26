@@ -1,0 +1,54 @@
+{
+    "code": 0,
+    "description": "Sub-services found successfully",
+    "result": [
+        {
+            "sector_code": "E111",
+            "sub_service_id": 7,
+            "service_name": "6 Yard Skip",
+            "description": "<p>The 6 yard skip is Ideal for both larger building and refurbishment projects. Also popular for domestic use, house clearances.</p>\n\n<p><strong>Types of waste available for this skip:</strong><br />\no Heavy Waste, Light Waste, Garden, Mixed Building Waste, Mixed Domestic</p>\n\n<p><strong>Waste that cannot be put in a skip:</strong><br />\no TVs/monitors, Plasterboard, Asbestos, Batteries, Tyres, Medical Waste, Flo tubes, Gas cylinders, Electricals, Solvents, Paint tins, Fuels<br />\no Insulation containing asbestos, other insulation containing hazardous substances,other construction materials containing asbestos</p>",
+            "price": 245,
+            "parent_service_img": "/service_images/skip_hire.png",
+            "haulage": 0,
+            "min_quantity": 1,
+            "max_quantity": 50,
+            "inner_services": []
+        },
+        {
+            "sector_code": "E111",
+            "sub_service_id": 8,
+            "service_name": "8 Yard Skip",
+            "description": "<p>The 8 yard skip, also known as the &lsquo;Builders Skip&rsquo;, is the most common skip used for heavy duty waste such as rubble, soil and concrete. Generally used on building projects and large garden clearances.</p>\n\n<p><strong>Types of waste available for this skip:</strong><br />\no Soil, Concrete, Mixed Domestic, Garden, Light Waste, Mixed Building Waste, Heavy Waste</p>\n\n<p><strong>Waste that cannot be put in a skip:</strong><br />\no TVs/monitors, Plasterboard, Asbestos, Batteries, Tyres, Medical Waste, Flo tubes, Gas cylinders, Electricals, Solvents, Paint tins, Fuels<br />\no Insulation containing asbestos, other insulation containing hazardous substances,other construction materials containing asbestos</p>",
+            "price": 265,
+            "parent_service_img": "/service_images/skip_hire.png",
+            "haulage": 0,
+            "min_quantity": 1,
+            "max_quantity": 50,
+            "inner_services": []
+        },
+        {
+            "sector_code": "E111",
+            "sub_service_id": 10,
+            "service_name": "12 Yard Skip",
+            "description": "<p>The 12 Yard Skip is ideal for large projects, office clearances and general fit outs. Suitable for light bulky waste.</p>\n\n<p><strong>Types of waste available for this skip:</strong><br />\no Light Building, Mixed waste, General Waste, Light Waste, Packaging, Plastic, Cardboard/Paper, Mixed Domestic Heavy Waste</p>\n\n<p><strong>Waste that cannot be put in a skip:</strong><br />\no Rubble, Soil, Concrete,TVs/monitors, Plasterboard, Asbestos, Batteries, Tyres, Medical Waste, Flo tubes, Gas cylinders, Electricals, Solvents, Paint tins, Fuels<br />\no Insulation containing asbestos, other insulation containing hazardous substances,other construction materials containing asbestos</p>",
+            "price": 330,
+            "parent_service_img": "/service_images/skip_hire.png",
+            "haulage": 0,
+            "min_quantity": 1,
+            "max_quantity": 50,
+            "inner_services": []
+        },
+        {
+            "sector_code": "E111",
+            "sub_service_id": 12,
+            "service_name": "16 Yard Skip",
+            "description": "<p>The 16 yard skips are ideal for light building projects, large household jobs, shopfitters as well as other types of general waste.</p>\n\n<p><strong>Types of waste available for this skip:</strong><br />\no Removing large amounts of light, bulky waste, paper or cardboard, furniture, packaging, shop refurbishing jobs with a lot of wood, plastic and metal to remove.</p>\n\n<p><strong>Waste that cannot be put in a skip:</strong><br />\no Rubble, Soil, Concrete, TVs/monitors, Plasterboard, Asbestos, Batteries, Tyres, Medical Waste, Flo tubes, Gas cylinders, Electricals, Solvents, Paint tins, Fuels<br />\no Insulation containing asbestos, other insulation containing hazardous substances, other construction materials containing asbestos.</p>",
+            "price": 430,
+            "parent_service_img": "/service_images/skip_hire.png",
+            "haulage": 0,
+            "min_quantity": 1,
+            "max_quantity": 50,
+            "inner_services": []
+        }
+    ]
+}

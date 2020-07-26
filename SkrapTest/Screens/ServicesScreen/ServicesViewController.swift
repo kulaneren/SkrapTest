@@ -11,6 +11,7 @@ import UIKit
 class ServicesViewController: UIViewController {
 
     @IBOutlet weak var collectionServices: UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     private let serviceCollectionCellIdentifier = "ServicesCollectCellIdentifier"
     private var apiClient = APIClient()
 
@@ -18,7 +19,6 @@ class ServicesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         getServices(withAPIClient: apiClient)
         initCollectionView()
         self.title = "Services"
@@ -26,22 +26,8 @@ class ServicesViewController: UIViewController {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        //collectionServices.collectionViewLayout.invalidateLayout()
         collectionServices.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
     }
-
-//override func viewWillLayoutSubviews() {
-//    super.viewWillLayoutSubviews()
-//    collectionServices.collectionViewLayout.invalidateLayout()
-//}
-
-//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-//        super.viewWillTransition(to: size, with: coordinator)
-//            collectionServices.collectionViewLayout.invalidateLayout()
-//          collectionServices.reloadData()
-//    }
-
-
 
     private func initCollectionView() {
         collectionServices.delegate = self
@@ -51,6 +37,7 @@ class ServicesViewController: UIViewController {
     }
 
     internal func getServices(withAPIClient apiClient: APIClient) {
+        activityIndicator.startAnimating()
         apiClient.getServices(withCompletion: { services, error in
             if let error = error as NSError? {
                 let alertAction = UIAlertAction(title: "Ok",
@@ -63,6 +50,7 @@ class ServicesViewController: UIViewController {
                 self.arryServices = services
                 self.collectionServices.reloadData()
             }
+            self.activityIndicator.stopAnimating()
         })
     }
 }
