@@ -56,7 +56,6 @@ class ServicesViewController: UIViewController {
 }
 
 extension ServicesViewController: UICollectionViewDelegate {
-
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showRecentAddresses", sender: self)
     }

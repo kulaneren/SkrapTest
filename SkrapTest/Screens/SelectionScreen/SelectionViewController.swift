@@ -37,6 +37,12 @@ class SelectionViewController: UIViewController {
         getAddresses(withAPIClient: apiClient)
         getSubServices(withAPIClient: apiClient)
         updateView()
+       // animateContainerViewIntoScreen()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animateContainerViewIntoScreen()
     }
 
     internal func updateView() {
@@ -56,6 +62,14 @@ class SelectionViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    func animateContainerViewIntoScreen() {
+        let frameContainerMain = containerMain.frame
+        containerMain.frame.origin.y = self.view.frame.size.height
+        UIView.animate(withDuration: 0.5, animations: {
+                self.containerMain.frame = frameContainerMain
+        })
     }
 
     internal func getAddresses(withAPIClient apiClient: APIClient) {
