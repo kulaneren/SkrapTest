@@ -33,6 +33,7 @@ class SelectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.startAnimating()
         getAddresses(withAPIClient: apiClient)
         getSubServices(withAPIClient: apiClient)
         updateView()
@@ -58,7 +59,6 @@ class SelectionViewController: UIViewController {
     }
 
     internal func getAddresses(withAPIClient apiClient: APIClient) {
-        activityIndicator.startAnimating()
         apiClient.getRecentAdresses(withCompletion: { addresses, error in
             if let error = error as NSError? {
                 let alertAction = UIAlertAction(title: "Ok",

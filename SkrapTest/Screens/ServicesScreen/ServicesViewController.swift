@@ -19,6 +19,7 @@ class ServicesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.startAnimating()
         getServices(withAPIClient: apiClient)
         initCollectionView()
         self.title = "Services"
@@ -37,7 +38,6 @@ class ServicesViewController: UIViewController {
     }
 
     internal func getServices(withAPIClient apiClient: APIClient) {
-        activityIndicator.startAnimating()
         apiClient.getServices(withCompletion: { services, error in
             if let error = error as NSError? {
                 let alertAction = UIAlertAction(title: "Ok",
